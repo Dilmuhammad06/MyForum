@@ -1,0 +1,16 @@
+{% load static %}
+<html>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<head>
+</head>
+
+<body>
+<label>{{category.name}}->Treads/</label>
+<a href="{% url 'home' %}"><h1>Home</h1></a>
+<nav style="margin-top:30px">
+{% for i in treads %}
+<li><a href="{% url 'posts' i.id %}">{{i.name}}</a></li>
+{% endfor %}
+</nav>
+</body>
+</html>

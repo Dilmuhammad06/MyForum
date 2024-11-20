@@ -1,0 +1,29 @@
+body{
+background-color:rgb(232, 170, 35);
+}
+
+#posts_main_div{
+background-color:rgb(245, 196, 91);
+border-radius:8px
+}
+
+#posts_div{
+border-radius:5px;
+background-color:green;
+width:300px;
+margin-bottom:30px;
+}
+
+#user_posting_div{
+margin-top:50px;
+}
+
+button{
+background-color:rgb(163, 126, 47);
+color:white;
+}
+
+a{
+text-decoration:none;
+color:black;
+}

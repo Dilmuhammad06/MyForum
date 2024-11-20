@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+<label>{{tread.category.name}}->{{tread.name}}->Treads/</label>
+<a href="{% url 'home' %}"><h1>Home</h1></a>
+<div id="posts_main_div"">
+
+<center>
+
+
+{% for i in posts %}
+<div id="posts_div">
+<h3>{{i.author.username}}</h3>
+<p>{{i.text}}</p>
+</div>
+{% endfor %}
+
+</center>
+
+</div>
+
+<center>
+<div id="user_posting_div">
+<form method="post">
+{% csrf_token %}
+<textarea name="text" placeholder="Write your ideas here..." cols="50"></textarea>
+<button type="submit">Post</button>
+</form>
+</div>
+</center>
+
+</body>
+</html>
+
+
